@@ -1,0 +1,58 @@
+<h3> Ajouter une categorie : </h3>
+<div id="addCat"> 
+    {{ form_start(form) }}  
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
+    <button><a  href="{{ path('home') }}"> Revenir à la page d'accueil</a></button>
+</div>
+
+<style>
+#addCat{
+  border: 2px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+}
+label{
+   padding-right : 5px;
+}
+
+input{
+   margin : 10px;
+   padding : 5px;
+   border-radius: 5px;
+   border: 1px solid #ccc;
+   background-color: #f9f9f9;
+   cursor: pointer;
+}
+#addCat{
+      text-align: center;
+      margin: 30px auto;
+      width: 100%;
+      max-width: 800px;
+      font-size : 20px;
+}
+
+h3{
+    text-align: center;
+    margin: 30px auto;
+    width: 100%;
+    max-width: 800px;
+    font-size : 45px;
+    color: #f20909;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+button{
+    margin : 20px 0;
+    padding : 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color:  #df3a3a;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #e4e4e4;
+}
+</style>

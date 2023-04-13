@@ -1,0 +1,85 @@
+<body>
+
+<h2> Liste des categories <h2>
+<button><a  href="{{ path('home') }}"> Revenir à la page d'accueil</a></button>
+{% if categories is empty %}
+        <p>pas de catégorie ajoutée</p>
+        
+    {% else %}
+
+
+
+
+<table class="table">
+<thead>
+    <tr>
+        <th>ID</th>
+        <th>Nom</th>
+    </tr>
+</thead>
+<tbody>
+    {% for category in categories %}
+    <tr>
+        <td>{{ category.id }}</td>
+        <td>{{ category.nom }}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+{% endif %}
+
+</body>
+
+<style>
+a{
+    text-decoration: none;
+    color: black;
+}
+button{
+    margin-bottom : 20px;
+    padding : 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f04f5f;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #e4e4e4;
+}
+
+h2{
+    text-align: center;
+    margin: 30px auto;
+    width: 100%;
+    max-width: 800px;
+    font-size : 45px;
+    color: #f20909;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color:#f9f9f9;
+}
+
+th, td {
+  padding: 0.75rem;
+  border:none;
+  text-align: left;
+}
+
+th {
+  background-color: #e4e4e4;
+  font-size:22px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+</style>

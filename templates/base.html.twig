@@ -1,0 +1,70 @@
+{% include 'navbar/navbar.html.twig' %}
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+       
+    </head>
+    <body>
+
+        <h1>ACCUEIL</h1>
+
+   <h2>Liste des produits</h2>
+
+      {% block body %}
+    
+    {% if products is empty %}
+        <p>Pas de produit ajouté.</p>
+    {% else %}
+        <ul>
+            {% for product in products %}
+              <li>nom : {{ product.nom }}
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              prix : {{ product.prix }} Dhs</li>
+              {# &nbsp;&nbsp;&nbsp;&nbsp;              #}
+   <button><a href="{{ path('product_details', {id: product.id}) }}">plus de details</a></button>
+
+            {% endfor %}
+        </ul>
+        
+    {% endif %}
+{% endblock %}
+    </body>
+</html>
+<style>
+li {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+button{
+    margin-bottom : 20px;
+    padding : 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f04f5f;
+    cursor: pointer;
+}
+button:hover{
+    background-color:#911a26;
+}
+h1{
+    color:#e36a6a;
+}
+a{ color:#e9dfe0;}
+
+</style>

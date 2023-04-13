@@ -1,0 +1,24 @@
+{# {% extends 'base.html.twig' %} #}
+
+
+<head>
+	<meta charset="UTF-8">
+	<title>
+		{% block title %}Welcome!
+		{% endblock %}
+	</title>
+	<link rel="stylesheet" href="{{ asset('css/details.css') }}">
+</head>
+{% block body %}
+	<div class="container">
+		<h1>{{ product.nom }}  </h1>
+		<p><img src="{{ asset('uploads/images/' ~ product.image) }}" alt="{{ product.nom }} image" width="300" height="auto"></p>
+		<p>Description :{{ product.description }}</p>
+		<p id="price">Prix:
+			{{ product.prix }}
+			Dhs
+		</p>
+        <button><a  href="{{ path('home') }}"> Revenir à la page d'accueil</a></button>
+	</div>
+{% endblock %}
+

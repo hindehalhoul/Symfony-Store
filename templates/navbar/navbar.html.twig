@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<nav>
+    <ul>
+        <a href="{{ path('product_add') }}">Ajouter un produit</a>
+        <a href="{{ path('category_add') }}">Ajouter une catégorie</a>
+        <a href="{{ path('category') }}">Lister les  catégories</a>
+
+        
+    </ul>
+</nav>
+<style>
+nav {
+	background-color: #ec706d;
+	height: 50px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+nav ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-grow: 1;
+  }
+  
+  nav ul li {
+	font-size: 1.2em;
+  }
+  
+  nav a {
+	padding: 15px;
+  }
+  
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items: center;
+}
+
+nav ul li {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+nav a {
+	color: white;
+	text-decoration: none;
+	padding: 10px;
+	border-radius: 5px;
+	
+}
+
+nav a:hover {
+	background-color: white;
+	color: #333;
+}
+
+</style>

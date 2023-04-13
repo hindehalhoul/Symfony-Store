@@ -1,0 +1,54 @@
+/* styles pour le titre principal */
+h1 {
+    font-size: 5em;
+    font-weight: bold;
+    color: #ed5f5f;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  
+  /* styles pour la description du produit */
+  p {
+    font-size: 2em;
+    line-height: 1.4;
+    color: #f20909;
+    margin-bottom: 20px;
+  }
+  
+  /* styles pour l'image du produit */
+  img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* styles pour le prix */
+  p:nth-of-type(2) {
+    font-size: 2em;
+    font-weight: bold;
+    color: #101011;
+    margin-bottom: 20px;
+  }
+  
+  /* styles pour le bouton */
+  button {
+    background-color: #78787b;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  button a {
+    color: rgb(255, 253, 253);
+}
+  
+  button:hover {
+    background-color: #0d0d0e;
+  }
+  
